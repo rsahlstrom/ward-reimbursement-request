@@ -1,0 +1,176 @@
+body {
+  font-family: Helvetica;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1, h2 {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.stapleArea {
+  margin-top: 0;
+  border-top: 1px solid black;
+  text-align: center;
+  padding-top: 4px;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 10px
+}
+
+.pageTitle h2 {
+  margin-top: 0;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.receipts {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 12px;
+  clear: both;
+}
+
+.receipts__vendor {
+  width: 28%;
+}
+
+.receipts__total {
+  width: 18%;
+}
+
+.receipts__reimbursement {
+  width: 18%;
+}
+
+.receipts__pretax {
+  width: 18%;
+}
+
+.receipts__tax {
+  width: 18%;
+}
+
+.receipts tr {
+  height: 28px;
+}
+
+.receipts th, .receipts td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 6px 10px;
+  border: 1px solid black;
+}
+
+.receipts thead tr {
+  background-color: #9e9e9e;
+}
+
+.receipts .receipts__totals {
+  text-align: right;
+  border: 0;
+}
+
+.receipts .receipt--alt {
+  background-color: #cfcfcf;
+}
+
+.blankFillWrapper {
+  clear: both;
+}
+
+.blankFill {
+  width: 100%;
+  height: 34px;
+}
+
+.blankFill {
+  position: relative;
+  border-bottom: 1px solid black;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.blankFill--marginRight {
+  margin-right: 1%;
+}
+
+.blankFill--submitting, .blankFill--reimbursing, .blankFill--subcategory, .blankFill--auxiliary {
+  width: 49%;
+}
+
+.blankFill--purpose {
+  width: 100%;
+}
+
+.blankFill--signature {
+  width: 65%;
+}
+
+.blankFill--date {
+  width: 32%;
+}
+
+.blankFill__type {
+  position: absolute;
+  left: 0;
+  top: 42px;
+  font-size: 10px;
+}
+
+.signatures {
+  margin-bottom: 32px;
+}
+
+.notes {
+  text-align: center;
+}
+
+.note {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.step {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.step__number {
+  background: #9e9e9e;
+  border-radius: 0.8em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4em;
+  width: 1.4em;
+  font-size: 18px;
+  font-style: normal;
+  margin-right: 8px;
+}
+
+.emphasize {
+  border-bottom: 4px double black;
+}
