@@ -2,14 +2,349 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Eastlake 7th Ward Reimbursement Request</title>
 	<style type="text/css">
+		body {
+			font-family: Helvetica;
+			font-size: 14px;
+			margin: 0;
+		}
 
+		h1, h2 {
+			margin-bottom: 0;
+		}
+
+		h1 {
+			font-size: 16px;
+		}
+
+		h2 {
+			font-size: 14px;
+		}
+
+		.stapleArea {
+			margin-top: 0;
+			border-top: 1px solid black;
+			text-align: center;
+			padding-top: 4px;
+			width: 300px;
+			margin: 0 auto;
+			font-size: 12px;
+		}
+
+		.pageTitle {
+			text-align: center;
+			margin-bottom: 10px
+		}
+
+		.pageTitle h2 {
+			margin-top: 0;
+		}
+
+		.info {
+			margin-bottom: 10px;
+		}
+
+		.receipts {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 16px;
+			font-size: 12px;
+			clear: both;
+		}
+
+		.receipts__vendor {
+			width: 28%;
+		}
+
+		.receipts__total {
+			width: 18%;
+		}
+
+		.receipts__reimbursement {
+			width: 18%;
+		}
+
+		.receipts__pretax {
+			width: 18%;
+		}
+
+		.receipts__tax {
+			width: 18%;
+		}
+
+		.receipts tr {
+			height: 28px;
+		}
+
+		.receipts th, .receipts td {
+			text-align: left;
+			vertical-align: middle;
+			padding: 6px 10px;
+			border: 1px solid black;
+		}
+
+		.receipts thead tr {
+			background-color: #9e9e9e;
+		}
+
+		.receipts .receipts__totals {
+			text-align: right;
+			border: 0;
+		}
+
+		.receipts .receipt--alt {
+			background-color: #cfcfcf;
+		}
+
+		.blankFillWrapper {
+			clear: both;
+		}
+
+		.blankFill {
+			width: 100%;
+			height: 34px;
+		}
+
+		.blankFill {
+			position: relative;
+			border-bottom: 1px solid black;
+			margin-bottom: 12px;
+			display: inline-block;
+		}
+
+		.blankFill--marginRight {
+			margin-right: 1%;
+		}
+
+		.blankFill--submitting, .blankFill--reimbursing, .blankFill--subcategory, .blankFill--auxiliary {
+			width: 49%;
+		}
+
+		.blankFill--purpose {
+			width: 100%;
+		}
+
+		.blankFill--signature {
+			width: 65%;
+		}
+
+		.blankFill--date {
+			width: 32%;
+		}
+
+		.blankFill__type {
+			position: absolute;
+			left: 0;
+			top: 42px;
+			font-size: 10px;
+		}
+
+		.signatures {
+			margin-bottom: 32px;
+		}
+
+		.notes {
+			text-align: center;
+		}
+
+		.note {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 10px;
+		}
+
+		.clearFix {
+			clear: both;
+		}
+
+		.step {
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		.step__number {
+		  background: #9e9e9e;
+		  border-radius: 0.8em;
+		  color: #fff;
+		  display: inline-block;
+		  font-weight: bold;
+		  text-align: center;
+		  line-height: 1.4em;
+		  width: 1.4em;
+		  font-size: 18px;
+		  font-style: normal;
+		  margin-right: 8px;
+		}
+
+    .emphasize {
+      border-bottom: 4px double black;
+    }
   </style>
 </head>
 <body>
 
+<p class="stapleArea">Staple receipts to back here</p>
 
+<header class="pageTitle">
+	<h1>Reimbursement Request for Eastlake 7th Ward</h1>
+</header>
+
+<div class="step"><span class="step__number">1</span>Answer the following questions.</div>
+
+<section class="info">
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--submitting blankFill--marginRight">
+				<div class="blankFill__type">Who is filling out this form?</div>
+		</div>
+		<div class="blankFill blankFill--reimbursing">
+				<div class="blankFill__type">Who should be reimbursed?</div>
+		</div>
+	</div>
+
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--purpose">
+				<div class="blankFill__type">How would you explain the purpose of these expenses to a Church auditor?</div>
+		</div>
+	</div>
+
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--auxiliary blankFill--marginRight">
+				<div class="blankFill__type">What auxiliary is responsible for the expenses?</div>
+		</div>
+		<div class="blankFill blankFill--subcategory">
+				<div class="blankFill__type">What auxiliary subcategory should be charged?</div>
+		</div>
+	</div>
+	<br class="clearFix" />
+</section>
+
+<div class="step" style="margin-bottom: 14px;"><span class="step__number">2</span>Fill out the table correctly and then attach the <em class="emphasize">itemized receipts</em> to the area indicated above.</div>
+
+<table class="receipts">
+	<thead>
+		<tr>
+			<th class="receipts__vendor">Where did the expense happen?</th>
+			<th class="receipts__total">What's the total on the receipt?</th>
+			<th class="receipts__reimbursement">How much should be reimbursed?</th>
+			<th class="receipts__tax">How much of that is tax?</th>
+			<th class="receipts__pretax">What's the amount minus that tax?</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th colspan="2" class="receipts__totals">What's the sum of the values in each column?</th>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr class="receipt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="receipt receipt--alt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="receipt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="receipt receipt--alt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="receipt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr class="receipt receipt--alt">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+    </tr>
+    <tr class="receipt">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="receipt receipt--alt">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+	</tbody>
+</table>
+
+
+<div class="step"><span class="step__number">3</span>Sign your name and obtain your auxiliary leader's signature.</div>
+
+<section class="signatures signatures--group1">
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--signature blankFill--marginRight">
+			<div class="blankFill__type">Requester's Signature</div>
+		</div>
+		<div class="blankFill blankFill--date blankFill--marginRight">
+			<div class="blankFill__type">Date</div>
+		</div>
+	</div>
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--signature blankFill--marginRight">
+			<div class="blankFill__type">Auxiliary Leader's Signature</div>
+		</div>
+		<div class="blankFill blankFill--date">
+			<div class="blankFill__type">Date</div>
+		</div>
+	</div>
+</section>
+
+<div class="step"><span class="step__number">4</span>Hand request to a financial clerk for further processing.</div>
+
+<section class="signatures">
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--signature blankFill--marginRight">
+			<div class="blankFill__type">Clerk's Signature</div>
+		</div>
+		<div class="blankFill blankFill--date blankFill--marginRight">
+			<div class="blankFill__type">Date</div>
+		</div>
+	</div>
+	<div class="blankFillWrapper">
+		<div class="blankFill blankFill--signature blankFill--marginRight">
+			<div class="blankFill__type">Bishop's Signature</div>
+		</div>
+		<div class="blankFill blankFill--date">
+			<div class="blankFill__type">Date</div>
+		</div>
+	</div>
+</section>
+
+<footer class="notes">
+	<p class="note">*** Itemized receipts required. Credit card receipts and statements not acceptable. If you've lost your receipts, contact your clerk for instructions. ***</p>
+</footer>
 
 </body>
 </html>
