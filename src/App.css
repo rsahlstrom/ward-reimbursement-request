@@ -138,16 +138,6 @@ h2 {
   margin-bottom: 32px;
 }
 
-.notes {
-  text-align: center;
-}
-
-.note {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 10px;
-}
-
 .clearFix {
   clear: both;
 }
@@ -172,5 +162,28 @@ h2 {
 }
 
 .emphasize {
-  /* border-bottom: 4px double black; */
+  text-decoration: underline;
 }
+
+.checkboxQuestion {
+  margin: 18px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.checkboxQuestion input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkboxQuestion__checkBox {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BlankFill from './BlankFill';
 import BlankFills from './BlankFills';
 import ExpenseTable from './ExpenseTable';
+import CheckboxQuestion from './CheckboxQuestion';
 import Step from './Step';
 import './App.css';
 
@@ -38,10 +39,10 @@ class App extends Component {
         </section>
 
         <Step number={2} style={{marginBottom: '14px'}}>
-          Complete the table completely and then attach the <em className="emphasize">itemized receipts</em> to the area indicated above.
+          Complete the table and then attach the <em className="emphasize">itemized receipts</em> to the area indicated above.
         </Step>
 
-        <ExpenseTable rows={8} />
+        <ExpenseTable rows={6} />
 
         <Step number={3}>
           Sign your name and obtain your auxiliary leader's signature.
@@ -59,6 +60,15 @@ class App extends Component {
         </section>
 
         <Step number={4}>
+          Specify the time frame in which you need your reimbursement
+        </Step>
+
+        <section className="processingTime">
+          <CheckboxQuestion>This is urgent. I need this reimbursement within the next 72 hours.</CheckboxQuestion>
+          <CheckboxQuestion>I can wait the normal one to two weeks processing time.</CheckboxQuestion>
+        </section>
+
+        <Step number={5}>
           Hand request to a financial clerk for further processing.
         </Step>
 
@@ -72,10 +82,6 @@ class App extends Component {
             <BlankFill type="date">Date</BlankFill>
           </BlankFills>
         </section>
-
-        <footer className="notes">
-          <p className="note">*** Itemized receipts required. Credit card receipts and statements not acceptable. If you've lost your receipts, contact your clerk for instructions. ***</p>
-        </footer>
       </React.Fragment>
     );
   }
