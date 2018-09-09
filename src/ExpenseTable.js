@@ -5,7 +5,7 @@ const ExpenseTable = (props) => {
   for (let rowNum = 0; rowNum < props.rows; rowNum++) {
     let alt = (rowNum % 2 === 0) ? '' : 'receipt--alt'
     rows.push(
-      <tr className={`receipt ${alt}`}>
+      <tr className={`receipt ${alt}`} key={`row${rowNum}`}>
         <td></td>
         <td></td>
         <td></td>
