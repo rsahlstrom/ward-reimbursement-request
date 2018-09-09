@@ -96,7 +96,7 @@ h2 {
 }
 
 .blankFill {
-  width: 100%;
+  width: 99%;
   height: 34px;
 }
 
@@ -111,20 +111,20 @@ h2 {
   margin-right: 1%;
 }
 
-.blankFill--submitting, .blankFill--reimbursing, .blankFill--subcategory, .blankFill--auxiliary {
+.blankFill--half {
   width: 49%;
 }
 
-.blankFill--purpose {
-  width: 100%;
+.blankFill--whole {
+  width: 99%;
 }
 
-.blankFill--signature {
+.blankFill--oneThird {
+  width:  33%;
+}
+
+.blankFill--twoThird {
   width: 65%;
-}
-
-.blankFill--date {
-  width: 32%;
 }
 
 .blankFill__type {
@@ -163,6 +163,10 @@ h2 {
 
 .emphasize {
   text-decoration: underline;
+}
+
+.fastOfferingCategories {
+  margin: 24px 0;
 }
 
 .checkboxQuestion {

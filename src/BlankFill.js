@@ -15,4 +15,8 @@ const BlankFill = (props) => {
   );
 };
 
+BlankFill.defaultProps = {
+  type: 'whole'
+};
+
 export default BlankFill;

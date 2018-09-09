@@ -38,7 +38,7 @@ class App extends Component {
           <br className="clearFix" />
         </section>
 
-        <Step number={2} style={{ marginBottom: '14px' }}>
+        <Step number={2} style={{marginBottom: '14px'}}>
           Complete the table and then attach the <em className="emphasize">itemized receipts</em> to the area indicated above.
         </Step>
 
