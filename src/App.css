@@ -161,6 +161,16 @@ h2 {
   margin-right: 8px;
 }
 
+.step--lines2 .step__number {
+  position: relative;
+  top: .6em;
+}
+
+.step__extraLine {
+  display: block;
+  margin-left: 2.4em;
+}
+
 .emphasize {
   text-decoration: underline;
 }

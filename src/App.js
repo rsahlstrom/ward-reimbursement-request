@@ -31,20 +31,30 @@ class App extends Component {
           </BlankFills>
 
           <BlankFills>
-            <BlankFill type="half" spaceAfter={true}>What auxiliary is responsible for the expenses?</BlankFill>
+            <BlankFill type="half" spaceAfter={true}>What auxiliary is responsible for the expenses? (One auxiliary per form)</BlankFill>
             <BlankFill type="half">What auxiliary subcategory should be charged?</BlankFill>
           </BlankFills>
 
           <br className="clearFix" />
         </section>
 
-        <Step number={2} style={{ marginBottom: '14px' }}>
-          Complete the table and then attach the <em className="emphasize">itemized receipts</em> to the area indicated above.
+        <Step number={2} style={{ marginBottom: '14px' }} lines={2}>
+          Complete the table and then attach the <em className="emphasize">itemized receipts</em> to the area indicated above.<br />
+          <span className="step__extraLine">Credit card receipts are <em className="emphasize">not acceptable</em>.</span>
         </Step>
 
         <ExpenseTable rows={6} />
 
         <Step number={3}>
+          Specify the time frame in which you need your reimbursement
+        </Step>
+
+        <section className="processingTime" style={{ marginBottom: '24px' }}>
+          <CheckboxQuestion>This is urgent. I need this reimbursement within the next 72 hours.</CheckboxQuestion>
+          <CheckboxQuestion>I can wait the normal one to two weeks processing time.</CheckboxQuestion>
+        </section>
+
+        <Step number={4}>
           Sign your name and obtain your auxiliary leader's signature.
         </Step>
 
@@ -57,15 +67,6 @@ class App extends Component {
             <BlankFill type="twoThird" spaceAfter={true}>Auxiliary Leader's Signature</BlankFill>
             <BlankFill type="oneThird">Date</BlankFill>
           </BlankFills>
-        </section>
-
-        <Step number={4}>
-          Specify the time frame in which you need your reimbursement
-        </Step>
-
-        <section className="processingTime">
-          <CheckboxQuestion>This is urgent. I need this reimbursement within the next 72 hours.</CheckboxQuestion>
-          <CheckboxQuestion>I can wait the normal one to two weeks processing time.</CheckboxQuestion>
         </section>
 
         <Step number={5}>
