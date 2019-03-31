@@ -4,7 +4,9 @@ import BlankFills from './BlankFills';
 import ExpenseTable from './ExpenseTable';
 import CheckboxQuestion from './CheckboxQuestion';
 import Step from './Step';
+import QRCode from 'qrcode.react';
 import './App.css';
+import {relative} from 'upath';
 
 class App extends Component {
   render() {
@@ -23,7 +25,7 @@ class App extends Component {
         <section className="info">
           <BlankFills>
             <BlankFill type="half" spaceAfter={true}>Who is filling out this form?</BlankFill>
-            <BlankFill type="half">Who should be reimbursed</BlankFill>
+            <BlankFill type="half">Who should be reimbursed?</BlankFill>
           </BlankFills>
 
           <BlankFills>
@@ -43,15 +45,18 @@ class App extends Component {
           <span className="step__extraLine">Credit card receipts are <em className="emphasize">not acceptable</em>.</span>
         </Step>
 
-        <ExpenseTable rows={6} />
+        <ExpenseTable rows={8} />
 
         <Step number={3}>
-          Specify the time frame in which you need your reimbursement
+          Specify how you would like to receive your reimbursement.
         </Step>
 
         <section className="processingTime" style={{ marginBottom: '24px' }}>
-          <CheckboxQuestion>This is urgent. I need this reimbursement within the next 72 hours.</CheckboxQuestion>
-          <CheckboxQuestion>I can wait the normal one to two weeks processing time.</CheckboxQuestion>
+          <CheckboxQuestion>
+            Electronic transfer (<strong>preferred</strong>). Scan QR Code or visit https://lds.org/donations/#/settings to setup.
+            <QRCode value="https://lds.org/donations/#/settings" size="80" style={{"float": "right", "position": "relative", "top": "-20px"}} />
+          </CheckboxQuestion>
+          <CheckboxQuestion>Printed check. Normal processing time is one to two weeks.</CheckboxQuestion>
         </section>
 
         <Step number={4}>
@@ -72,17 +77,6 @@ class App extends Component {
         <Step number={5}>
           Hand request to a financial clerk for further processing.
         </Step>
-
-        <section className="signatures">
-          <BlankFills>
-            <BlankFill type="twoThird" spaceAfter={true}>Clerk's Signature</BlankFill>
-            <BlankFill type="oneThird">Date</BlankFill>
-          </BlankFills>
-          <BlankFills>
-            <BlankFill type="twoThird" spaceAfter={true}>Bishop's Signature</BlankFill>
-            <BlankFill type="oneThird">Date</BlankFill>
-          </BlankFills>
-        </section>
       </React.Fragment>
     );
   }
