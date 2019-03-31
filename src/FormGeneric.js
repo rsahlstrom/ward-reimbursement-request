@@ -6,7 +6,6 @@ import CheckboxQuestion from './CheckboxQuestion';
 import Step from './Step';
 import QRCode from 'qrcode.react';
 import './App.css';
-import {relative} from 'upath';
 
 class App extends Component {
   render() {
@@ -54,7 +53,7 @@ class App extends Component {
         <section className="processingTime" style={{ marginBottom: '24px' }}>
           <CheckboxQuestion>
             Electronic transfer (<strong>preferred</strong>). Scan QR Code or visit https://lds.org/donations/#/settings to setup.
-            <QRCode value="https://lds.org/donations/#/settings" size="80" style={{"float": "right", "position": "relative", "top": "-20px"}} />
+            <QRCode value="https://lds.org/donations/#/settings" size={80} style={{"float": "right", "position": "relative", "top": "-20px"}} />
           </CheckboxQuestion>
           <CheckboxQuestion>Printed check. Normal processing time is one to two weeks.</CheckboxQuestion>
         </section>
