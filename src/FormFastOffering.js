@@ -5,7 +5,7 @@ import CheckboxQuestion from './CheckboxQuestion';
 import Step from './Step';
 import './App.css';
 
-class App extends Component {
+class FormFastOffering extends Component {
   render() {
     return (
       <React.Fragment>
@@ -85,4 +85,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default FormFastOffering;

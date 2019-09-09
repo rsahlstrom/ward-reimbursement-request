@@ -7,7 +7,7 @@ import Step from './Step';
 import QRCode from 'qrcode.react';
 import './App.css';
 
-class App extends Component {
+class FormGeneric extends Component {
   render() {
     return (
       <React.Fragment>
@@ -81,4 +81,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default FormGeneric;
